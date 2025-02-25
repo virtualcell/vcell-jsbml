@@ -25,6 +25,13 @@
   <artifactId>jsbml-parent</artifactId>
   <version>1.7-SNAPSHOT</version>
   <packaging>pom</packaging>
+
+  <repositories>
+    <repository>
+      <id>Neeve Research</id>
+      <url>https://nexus.neeveresearch.com/nexus/content/repositories/thirdparty/</url>
+    </repository>
+  </repositories>
   
   
   <!-- =================================================================== -->

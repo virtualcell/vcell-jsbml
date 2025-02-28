@@ -52,7 +52,7 @@ public class DomainType extends AbstractSpatialNamedSBase {
    */
   private Integer spatialDimensions;
 
-  // private static final ResourceBundle bundle = ResourceManager.getBundle("org.sbml.jsbml.ext.spatial.Messages");
+  // private static final ResourceBundle bundle = new XMLResourceBundleControl.XMLResourceSpatial();
 
   /**
    * 

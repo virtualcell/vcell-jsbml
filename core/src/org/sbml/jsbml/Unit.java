@@ -27,10 +27,7 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.sbml.jsbml.Unit.Kind;
-import org.sbml.jsbml.util.Maths;
-import org.sbml.jsbml.util.ResourceManager;
-import org.sbml.jsbml.util.StringTools;
-import org.sbml.jsbml.util.TreeNodeChangeEvent;
+import org.sbml.jsbml.util.*;
 import org.sbml.jsbml.util.compilers.FormulaCompiler;
 
 /**
@@ -2434,7 +2431,7 @@ public class Unit extends AbstractSBase implements UniqueSId {
         attributes.put("exponent", Integer.toString((int) getExponent()));
         if (exponent - getExponent() != 0d) {
           logger.warn(MessageFormat.format(
-            ResourceManager.getBundle("org.sbml.jsbml.resources.cfg.Messages").getString("LOSS_OF_INFORMATION_DUE_TO_ROUNDING"),
+            new XMLResourceBundleControl.XMLResourceConfig().getString("LOSS_OF_INFORMATION_DUE_TO_ROUNDING"),
             getExponent(), exponent));
         }
       }

@@ -40,11 +40,7 @@ import java.util.TreeMap;
 import javax.swing.tree.TreeNode;
 
 import org.apache.log4j.Logger;
-import org.sbml.jsbml.util.ResourceManager;
-import org.sbml.jsbml.util.TreeNodeChangeEvent;
-import org.sbml.jsbml.util.TreeNodeChangeListener;
-import org.sbml.jsbml.util.TreeNodeRemovedEvent;
-import org.sbml.jsbml.util.TreeNodeWithChangeSupport;
+import org.sbml.jsbml.util.*;
 import org.sbml.jsbml.util.filters.Filter;
 
 /**
@@ -63,7 +59,7 @@ public abstract class AbstractTreeNode implements TreeNodeWithChangeSupport {
   /**
    * Localization support.
    */
-  protected static final transient ResourceBundle resourceBundle = ResourceManager.getBundle("org.sbml.jsbml.resources.Messages");
+  protected static final transient ResourceBundle resourceBundle = new XMLResourceBundleControl.XMLResourcePlain();
 
   /**
    * A {@link Logger} for this class.

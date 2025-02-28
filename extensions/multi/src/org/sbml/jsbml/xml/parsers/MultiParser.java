@@ -55,6 +55,7 @@ import org.sbml.jsbml.ext.multi.SpeciesFeature;
 import org.sbml.jsbml.ext.multi.SpeciesFeatureType;
 import org.sbml.jsbml.util.ResourceManager;
 import org.sbml.jsbml.ext.multi.MultiSpeciesType;
+import org.sbml.jsbml.util.XMLResourceBundleControl;
 import org.sbml.jsbml.xml.stax.SBMLObjectForXML;
 
 /**
@@ -78,7 +79,7 @@ public class MultiParser extends AbstractReaderWriter implements PackageParser {
   /**
    * Localization support.
    */
-  private static final transient ResourceBundle bundle = ResourceManager.getBundle("org.sbml.jsbml.resources.cfg.Messages");
+  private static final transient ResourceBundle bundle = new XMLResourceBundleControl.XMLResourceConfig();
 
   /**
    * 

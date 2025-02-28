@@ -27,7 +27,7 @@
   <parent>
     <groupId>org.sbml.jsbml</groupId>
     <artifactId>jsbml-parent</artifactId>
-    <version>1.7-SNAPSHOT</version>
+    <version>1.6.1-VCELL</version>
     <relativePath>../</relativePath>
   </parent>
   
@@ -118,7 +118,7 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.mangosdk.spi</groupId>
+      <groupId>org.mangosdk</groupId>
       <artifactId>spi</artifactId>
       <version>0.2.4</version>
       <optional>true</optional>

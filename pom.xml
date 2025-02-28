@@ -23,8 +23,15 @@
   
   <groupId>org.sbml.jsbml</groupId>
   <artifactId>jsbml-parent</artifactId>
-  <version>1.7-SNAPSHOT</version>
+  <version>1.6.1-VCELL</version>
   <packaging>pom</packaging>
+
+  <repositories>
+    <repository>
+      <id>Neeve Research</id>
+      <url>https://nexus.neeveresearch.com/nexus/content/repositories/thirdparty/</url>
+    </repository>
+  </repositories>
   
   
   <!-- =================================================================== -->

@@ -44,6 +44,7 @@
 	import org.sbml.jsbml.ext.qual.QualitativeSpecies;
 	import org.sbml.jsbml.ext.qual.Transition;
 	import org.sbml.jsbml.util.ResourceManager;
+	import org.sbml.jsbml.util.XMLResourceBundleControl;
 	import org.sbml.jsbml.xml.stax.SBMLObjectForXML;
 
 	/**
@@ -72,8 +73,7 @@
 		/**
 		 * Localization support.
 		 */
-		private static final transient ResourceBundle bundle = ResourceManager
-				.getBundle("org.sbml.jsbml.resources.cfg.Messages");
+		private static final transient ResourceBundle bundle = new XMLResourceBundleControl.XMLResourceConfig();
 
 		/*
 		 * (non-Javadoc)

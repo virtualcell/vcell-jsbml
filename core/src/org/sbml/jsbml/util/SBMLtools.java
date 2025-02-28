@@ -202,7 +202,7 @@ public class SBMLtools {
       Integer.valueOf(2))) {
       sbase.setSBOTerm(term);
     } else {
-      ResourceBundle bundle = ResourceManager.getBundle("org.sbml.jsbml.resources.cfg.Messages");
+      ResourceBundle bundle = new XMLResourceBundleControl.XMLResourceConfig();
       logger.warn(format(bundle.getString("SBMLtools.COULD_NOT_SET_SBO_TERM"),
         SBO.sboNumberString(term), sbase.getElementName(), sbase.getLevel(), sbase.getVersion()));
     }

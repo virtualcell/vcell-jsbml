@@ -30,6 +30,7 @@ import org.sbml.jsbml.SBMLException;
 import org.sbml.jsbml.Species;
 import org.sbml.jsbml.util.ResourceManager;
 import org.sbml.jsbml.util.StringTools;
+import org.sbml.jsbml.util.XMLResourceBundleControl;
 import org.sbml.jsbml.xml.parsers.AbstractReaderWriter;
 
 /**
@@ -54,7 +55,7 @@ public class SpatialSpeciesPlugin extends AbstractSpatialSBasePlugin {
   /**
    * Localization support
    */
-  private static final ResourceBundle bundle = ResourceManager.getBundle("org.sbml.jsbml.ext.spatial.Messages");
+  private static final ResourceBundle bundle = new XMLResourceBundleControl.XMLResourceSpatial();
 
 
 

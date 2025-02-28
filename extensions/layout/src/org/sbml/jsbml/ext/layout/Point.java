@@ -29,6 +29,7 @@ import org.sbml.jsbml.UniqueNamedSBase;
 import org.sbml.jsbml.util.ResourceManager;
 import org.sbml.jsbml.util.StringTools;
 import org.sbml.jsbml.util.TreeNodeChangeEvent;
+import org.sbml.jsbml.util.XMLResourceBundleControl;
 
 /**
  * The representation of a point in the "layout" package.
@@ -492,7 +493,7 @@ public class Point extends AbstractNamedSBase implements UniqueNamedSBase {
     if (isSetName()) {
       attributes.remove("name");
       logger.warn(MessageFormat.format(
-        ResourceManager.getBundle("org.sbml.jsbml.resources.cfg.Messages").getString("UNDEFINED_ATTRIBUTE"),
+        new XMLResourceBundleControl.XMLResourceConfig().getString("UNDEFINED_ATTRIBUTE"),
         "name", getLevel(), getVersion(), getElementName()));
       // TODO 2013/12: This must be generally solved. Here we have an SBase with ID but without name!
     }

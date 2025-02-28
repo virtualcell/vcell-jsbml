@@ -66,6 +66,7 @@ import org.sbml.jsbml.UnitDefinition;
 import org.sbml.jsbml.util.ResourceManager;
 import org.sbml.jsbml.util.SBMLtools;
 import org.sbml.jsbml.util.TreeNodeWithChangeSupport;
+import org.sbml.jsbml.util.XMLResourceBundleControl;
 import org.sbml.jsbml.util.filters.Filter;
 import org.sbml.jsbml.xml.XMLAttributes;
 import org.sbml.jsbml.xml.XMLNode;
@@ -102,7 +103,7 @@ public class SBMLCoreParser implements ReadingParser, WritingParser {
   /**
    * Localization support.
    */
-  private static final transient ResourceBundle bundle = ResourceManager.getBundle("org.sbml.jsbml.resources.cfg.Messages");
+  private static final transient ResourceBundle bundle = new XMLResourceBundleControl.XMLResourceConfig();
 
   /**
    * Creates a SBMLCoreParser instance. Initializes the sbmlCoreElements of

@@ -24,6 +24,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import org.sbml.jsbml.util.ResourceManager;
+import org.sbml.jsbml.util.XMLResourceBundleControl;
 
 /**
  * Contains some constants related to the spatial package.
@@ -51,7 +52,7 @@ public class SpatialConstants {
   /**
    * 
    */
-  public static final ResourceBundle bundle = ResourceManager.getBundle("org.sbml.jsbml.ext.spatial.Messages");
+  public static final ResourceBundle bundle = new XMLResourceBundleControl.XMLResourceSpatial();
 
 
   /**

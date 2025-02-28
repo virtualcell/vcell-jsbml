@@ -25,6 +25,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import org.sbml.jsbml.util.ResourceManager;
+import org.sbml.jsbml.util.XMLResourceBundleControl;
 
 /**
  * Contains some constants related to the Dynamic Structures package.
@@ -49,8 +50,7 @@ public class DynConstants {
   /**
    * 
    */
-  public static final ResourceBundle bundle = ResourceManager
-      .getBundle("org.sbml.jsbml.ext.dyn.Messages");
+  public static final ResourceBundle bundle = new XMLResourceBundleControl.XMLResourceDYN();
 
   /**
    * 

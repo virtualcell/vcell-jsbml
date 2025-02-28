@@ -84,6 +84,7 @@ import org.sbml.jsbml.ext.layout.SpeciesGlyph;
 import org.sbml.jsbml.ext.layout.SpeciesReferenceGlyph;
 import org.sbml.jsbml.ext.layout.TextGlyph;
 import org.sbml.jsbml.util.ResourceManager;
+import org.sbml.jsbml.util.XMLResourceBundleControl;
 import org.sbml.jsbml.util.filters.Filter;
 import org.sbml.jsbml.xml.stax.SBMLObjectForXML;
 
@@ -103,7 +104,7 @@ public class L3LayoutParser extends AbstractReaderWriter implements PackageParse
   /**
    * Localization support.
    */
-  private static final transient ResourceBundle bundle = ResourceManager.getBundle("org.sbml.jsbml.resources.cfg.Messages");
+  private static final transient ResourceBundle bundle = new XMLResourceBundleControl.XMLResourceConfig();
 
   /* (non-Javadoc)
    * @see org.sbml.jsbml.xml.parsers.AbstractReaderWriter#getNamespaceURI()

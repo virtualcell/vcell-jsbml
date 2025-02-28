@@ -61,58 +61,6 @@ public class XMLResourceBundleControl extends Control {
    * 
    * @author Andreas Dr&auml;ger
    */
-  private static class XMLResourceBundle extends ResourceBundle {
-
-    /**
-     * The wrapped element.
-     */
-    private Properties properties;
-
-    /**
-     * 
-     * @param stream
-     * @throws IOException
-     * @throws InvalidPropertiesFormatException
-     */
-    public XMLResourceBundle(InputStream stream) throws IOException,
-    InvalidPropertiesFormatException {
-      Properties defaults = new Properties();
-      defaults.loadFromXML(stream);
-      properties = new Properties(defaults);
-    }
-
-    /* (non-Javadoc)
-     * @see java.util.ResourceBundle#getKeys()
-     */
-    @Override
-    public Enumeration<String> getKeys() {
-      Set<String> key = properties.stringPropertyNames();
-      return Collections.enumeration(key);
-    }
-
-    /* (non-Javadoc)
-     * @see java.util.ResourceBundle#handleGetObject(java.lang.String)
-     */
-    @Override
-    protected Object handleGetObject(String key) {
-      String element = properties.getProperty(key);
-      if ((element != null) && (element.length() > 0)
-          && (element.charAt(0) == '[')
-          && (element.charAt(element.length() - 1) == ']')) {
-        return element.substring(1, element.length() - 1).split(";");
-      }
-      return element;
-    }
-
-    /* (non-Javadoc)
-     * @see java.lang.Object#toString()
-     */
-    @Override
-    public String toString() {
-      return properties.toString();
-    }
-
-  }
 
   /**
    * The extension for XML files.
@@ -141,21 +89,111 @@ public class XMLResourceBundleControl extends Control {
     ResourceBundle bundle = null;
 
     if (format.equalsIgnoreCase(XML)) {
-      // Localize resource file
-      String bundleName = toBundleName(baseName, locale);
-      String resName = toResourceName(bundleName, format);
-      InputStream is = loader.getResourceAsStream(resName);
-      if (is == null) {
-        is = getClass().getResourceAsStream('/' + resName);
-      }
-      if (is != null) {
-        // Create ResourceBundle object
-        bundle = new XMLResourceBundle(is);
-        is.close();
+      switch (baseName){
+        case "org.sbml.jsbml.resources.Messages":
+          bundle = new XMLResourcePlain();
+          break;
+        case "org.sbml.jsbml.resources.cfg.Messages":
+          bundle = new XMLResourceConfig();
+          break;
+        case "org.sbml.jsbml.ext.arrays.validator.constraints.Messages":
+          bundle = new XMLResourceConstraints();
+          break;
+        case "org.sbml.jsbml.ext.spatial.Messages":
+          bundle = new XMLResourceSpatial();
+          break;
+        case "org.sbml.jsbml.ext.dyn.Messages":
+          bundle = new XMLResourceDYN();
+          break;
       }
     }
     // Return the bundle.
     return bundle;
+  }
+
+  public static class XMLResourcePlain extends XMLResourceBundle{
+    public XMLResourcePlain() {
+        try {
+            setProperties("/org/sbml/jsbml/resources/Messages.xml");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+  }
+
+  public static class XMLResourceConfig extends XMLResourceBundle{
+    public XMLResourceConfig() {
+        try {
+            setProperties("/org/sbml/jsbml/resources/cfg/Messages.xml");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+  }
+
+  public static class XMLResourceConstraints extends XMLResourceBundle{
+    public XMLResourceConstraints() {
+        try {
+            setProperties("/org/sbml/jsbml/ext/arrays/validator/constraints/Messages.xml");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+  }
+
+  public static class XMLResourceSpatial extends XMLResourceBundle{
+    public XMLResourceSpatial() {
+        try {
+            setProperties("/org/sbml/jsbml/ext/spatial/Messages.xml");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+  }
+
+  public static class XMLResourceDYN extends XMLResourceBundle{
+    public XMLResourceDYN() {
+        try {
+            setProperties("/org/sbml/jsbml/ext/dyn/Messages.xml");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+  }
+
+  private static class XMLResourceBundle extends ResourceBundle {
+    private Properties properties;
+
+    public void setProperties(String resourceName) throws IOException {
+      Properties defaults = new Properties();
+      InputStream is = XMLResourceBundle.class.getResourceAsStream(resourceName);
+      defaults.loadFromXML(is);
+      properties = new Properties(defaults);
+      assert is != null;
+      is.close();
+    }
+
+    @Override
+    public Enumeration<String> getKeys() {
+      Set<String> key = properties.stringPropertyNames();
+      return Collections.enumeration(key);
+    }
+
+    @Override
+    protected Object handleGetObject(String key) {
+      String element = properties.getProperty(key);
+      if ((element != null) && (element.length() > 0)
+              && (element.charAt(0) == '[')
+              && (element.charAt(element.length() - 1) == ']')) {
+        return element.substring(1, element.length() - 1).split(";");
+      }
+      return element;
+    }
+
+    @Override
+    public String toString() {
+      return properties.toString();
+    }
   }
 
 }

@@ -80,6 +80,7 @@ import org.sbml.jsbml.ext.spatial.SpatialSpeciesPlugin;
 import org.sbml.jsbml.ext.spatial.SpatialSymbolReference;
 import org.sbml.jsbml.ext.spatial.TransformationComponent;
 import org.sbml.jsbml.util.ResourceManager;
+import org.sbml.jsbml.util.XMLResourceBundleControl;
 import org.sbml.jsbml.xml.stax.SBMLObjectForXML;
 
 /**
@@ -96,7 +97,7 @@ public class SpatialParser extends AbstractReaderWriter implements PackageParser
   /**
    * Localization support.
    */
-  private static final transient ResourceBundle bundle = ResourceManager.getBundle("org.sbml.jsbml.resources.cfg.Messages");
+  private static final transient ResourceBundle bundle = new XMLResourceBundleControl.XMLResourceConfig();
 
   /**
    * A {@link Logger} for this class.

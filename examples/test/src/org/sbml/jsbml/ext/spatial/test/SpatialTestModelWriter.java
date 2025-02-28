@@ -46,7 +46,7 @@ public class SpatialTestModelWriter {
    */
   public static void main(String[] args) throws SBMLException, XMLStreamException {
 
-    ResourceManager.getBundle("org.sbml.jsbml.ext.spatial.Messages");
+    new XMLResourceBundleControl.XMLResourceSpatial();
 
     SBMLDocument doc = new SBMLDocument(3, 1);
     Model model = doc.createModel("m1");

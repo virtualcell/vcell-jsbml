@@ -33,6 +33,7 @@ import org.sbml.jsbml.ext.arrays.ArraysConstants;
 import org.sbml.jsbml.ext.arrays.ArraysSBasePlugin;
 import org.sbml.jsbml.ext.arrays.util.ArraysMath;
 import org.sbml.jsbml.util.ResourceManager;
+import org.sbml.jsbml.util.XMLResourceBundleControl;
 import org.sbml.jsbml.validator.offline.factory.SBMLErrorCodes;
 
 /**
@@ -44,7 +45,7 @@ public class ArraysMathCheck extends ArraysConstraint {
   /**
    * Localization support.
    */
-  private static final transient ResourceBundle bundle = ResourceManager.getBundle("org.sbml.jsbml.ext.arrays.validator.constraints.Messages");
+  private static final transient ResourceBundle bundle = new XMLResourceBundleControl.XMLResourceConstraints();
 
   //TODO: get right messages
   /**

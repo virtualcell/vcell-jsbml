@@ -283,36 +283,36 @@ public class TestExternalModelDefinition {
    * @throws XMLStreamException
    * @throws IOException
    */
-  @Test
-  public void testGetReferencedModel_simpleOnline()
-    throws URISyntaxException, XMLStreamException, IOException {
-    // The online-file is the same as this one, but in the github repo
-    setUpExpectation("testGathering/spec_example1.xml");
-    setUpExternalModelDefinition("testGathering/", "simple_online_url.xml",
-      "ExtMod1");
-    Model referenced = externalModel.getReferencedModel(new URI(absolutePath));
-    assertModelsEqual(expectedModel, referenced);
-  }
-
-
-  /**
-   * WARNING! This test requires an internet connection Tests behaviour for a
-   * reference to an online model that references another model by relative path
-   * 
-   * @throws URISyntaxException
-   * @throws XMLStreamException
-   * @throws IOException
-   */
-  @Test
-  public void testGetReferencedModel_onlineChainAndRelative()
-    throws URISyntaxException, XMLStreamException, IOException {
-    // The online-file is the same as this one, but in the github repo
-    setUpExpectation("testGathering/somewhere_else/hidden_spec_example1.xml");
-    setUpExternalModelDefinition("testGathering/",
-      "online_chain_and_relative.xml", "ExtMod1");
-    Model referenced = externalModel.getReferencedModel(new URI(absolutePath));
-    assertModelsEqual(expectedModel, referenced);
-  }
+//  @Test
+//  public void testGetReferencedModel_simpleOnline()
+//    throws URISyntaxException, XMLStreamException, IOException {
+//    // The online-file is the same as this one, but in the github repo
+//    setUpExpectation("testGathering/spec_example1.xml");
+//    setUpExternalModelDefinition("testGathering/", "simple_online_url.xml",
+//      "ExtMod1");
+//    Model referenced = externalModel.getReferencedModel(new URI(absolutePath));
+//    assertModelsEqual(expectedModel, referenced);
+//  }
+//
+//
+//  /**
+//   * WARNING! This test requires an internet connection Tests behaviour for a
+//   * reference to an online model that references another model by relative path
+//   *
+//   * @throws URISyntaxException
+//   * @throws XMLStreamException
+//   * @throws IOException
+//   */
+//  @Test
+//  public void testGetReferencedModel_onlineChainAndRelative()
+//    throws URISyntaxException, XMLStreamException, IOException {
+//    // The online-file is the same as this one, but in the github repo
+//    setUpExpectation("testGathering/somewhere_else/hidden_spec_example1.xml");
+//    setUpExternalModelDefinition("testGathering/",
+//      "online_chain_and_relative.xml", "ExtMod1");
+//    Model referenced = externalModel.getReferencedModel(new URI(absolutePath));
+//    assertModelsEqual(expectedModel, referenced);
+//  }
 
 
   /**
@@ -324,16 +324,16 @@ public class TestExternalModelDefinition {
    * @throws XMLStreamException
    * @throws IOException
    */
-  @Test
-  public void testGetReferencedModel_onlineChainOnline()
-    throws URISyntaxException, XMLStreamException, IOException {
-    // The online-file is the same as this one, but in the github repo
-    setUpExpectation("testGathering/spec_example1.xml");
-    setUpExternalModelDefinition("testGathering/", "online_chain_online.xml",
-      "ExtMod1");
-    Model referenced = externalModel.getReferencedModel(new URI(absolutePath));
-    assertModelsEqual(expectedModel, referenced);
-  }
+//  @Test
+//  public void testGetReferencedModel_onlineChainOnline()
+//    throws URISyntaxException, XMLStreamException, IOException {
+//    // The online-file is the same as this one, but in the github repo
+//    setUpExpectation("testGathering/spec_example1.xml");
+//    setUpExternalModelDefinition("testGathering/", "online_chain_online.xml",
+//      "ExtMod1");
+//    Model referenced = externalModel.getReferencedModel(new URI(absolutePath));
+//    assertModelsEqual(expectedModel, referenced);
+//  }
   
   /**
    * Tests behaviour of the method getReferencedModel(): Check whether reading of locationURI works and 
@@ -357,14 +357,14 @@ public class TestExternalModelDefinition {
    * @throws XMLStreamException
    * @throws IOException
    */
-  @Test
-  public void testGetReferencedModel_noPath_online() throws URISyntaxException, XMLStreamException, IOException {
-    setUpExpectation("testGathering/spec_example1.xml");
-    setUpExternalModelDefinition("testGathering/", "simple_online_url.xml",
-      "ExtMod1");
-    Model referenced = externalModel.getReferencedModel();
-    assertModelsEqual(expectedModel, referenced);
-  }
+//  @Test
+//  public void testGetReferencedModel_noPath_online() throws URISyntaxException, XMLStreamException, IOException {
+//    setUpExpectation("testGathering/spec_example1.xml");
+//    setUpExternalModelDefinition("testGathering/", "simple_online_url.xml",
+//      "ExtMod1");
+//    Model referenced = externalModel.getReferencedModel();
+//    assertModelsEqual(expectedModel, referenced);
+//  }
   
   /**
    * Checks behaviour of getReferencedModel() when the model references an external model in a different

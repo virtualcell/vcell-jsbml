@@ -60,9 +60,3 @@ jobs:
             core/target/*.jar
             extensions/spatial/target/*.jar
           body: ${{ github.event.inputs.release_description }}
-
-
-      - name: Deploy Library to Packages
-        run: mvn -P github deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.JSBML_PACKAGE_TOKEN }}

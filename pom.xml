@@ -345,19 +345,19 @@
     </profile>
     
     <profile>
-      <id>local</id>
+      <id>github</id>
       <!-- To deploy locally add '-Ddeploy=local' to your command line. -->
       <activation>
         <property>
           <name>deploy</name>
-          <value>local</value>
+          <value>github</value>
         </property>
       </activation>
       <distributionManagement>
         <repository>
-          <id>local-repo-deploy</id>
-          <name>Test Maven repository</name>
-          <url>file:///var/www/html/repo</url>
+          <id>github</id>
+          <name>GitHub Packages</name>
+          <url>https://maven.pkg.github.com/virtualcell/vcell-jsbml</url>
         </repository>
         <!-- if  snapshotRepository is not define, the defined repository will be used for snapshots as well. -->
       </distributionManagement>     

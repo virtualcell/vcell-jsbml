@@ -846,9 +846,14 @@ public class SBMLReader {
             isInsideAnnotation = false;
             annotationDeepness = -1;
 
-            // calling the annotation parsers
-            for (AnnotationReader annoReader : annotationParsers) {
-              annoReader.processAnnotation((SBase) ((Annotation) lastElement).getParent()); // or take the second element in the stack ??
+            // workaround to avoid class cast exception in the code below: (Annotation) lastElement
+            if(lastElement instanceof Annotation) {
+                // calling the annotation parsers
+                for (AnnotationReader annoReader : annotationParsers) {
+                    annoReader.processAnnotation((SBase) ((Annotation) lastElement).getParent()); // or take the second element in the stack ??
+                }
+            } else {
+                  logger.warn("lastElement cannot be cast to Annotation, skipping...");
             }
 
           } else if (isInsideAnnotation) {

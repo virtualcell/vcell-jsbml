@@ -848,6 +848,11 @@ public class SBMLReader {
 
             // calling the annotation parsers
             for (AnnotationReader annoReader : annotationParsers) {
+                if(!(lastElement instanceof Annotation)) {
+                    // workaround to avoid class cast exception in the code below: (Annotation) lastElement
+                    logger.warn("lastElement cannot be cast to Annotation, skipping...");
+                    break;
+                }
               annoReader.processAnnotation((SBase) ((Annotation) lastElement).getParent()); // or take the second element in the stack ??
             }
 

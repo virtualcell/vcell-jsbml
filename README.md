@@ -1,16 +1,14 @@
-JSBML
+VCell Edit of JSBML
 =====
+Modification of the original JSBML to suite the needs of 
+virtual cells requirements. Using JitPack to create and host library
+artifacts.
 
 <img align="right" src="doc/common/logo/jsbml_logo_200px.png"> JSBML is a community-driven project to create a free, open-source, pure Java library for reading, writing, and manipulating SBML files and data streams. It is an alternative to the mixed Java/native code-based interface provided in libSBML. 
 
 [![License](http://img.shields.io/:license-LGPL-blue.svg?style=plastic)](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html)
-![Lines of Code](https://img.shields.io/tokei/lines/github/sbmlteam/jsbml?color=orange&style=plastic)
 ![Code Size](https://img.shields.io/github/languages/code-size/sbmlteam/jsbml.svg?style=plastic)
-![Download count](https://img.shields.io/github/downloads/sbmlteam/jsbml/total.svg?style=plastic)
-[![Build Status](https://img.shields.io/travis/com/sbmlteam/jsbml.svg?style=plastic)](https://travis-ci.com/sbmlteam/jsbml)
-[![Stable version](https://img.shields.io/badge/stable_version-1.6.1-brightgreen.svg?style=plastic)](https://github.com/sbmlteam/jsbml/releases/tag/jsbml-1.6.1)
-[![Maven Central](https://img.shields.io/maven-central/v/org.sbml.jsbml/jsbml?version=1.6.1?label=Maven%20Central&style=plastic)](https://search.maven.org/search?q=jsbml)
-[![DOI](http://img.shields.io/badge/DOI-10.1093%20%2F%20bioinformatics%20%2F%20btv341-blue.svg?style=plastic)](https://doi.org/10.1093/bioinformatics/btv341)
+[![JitPack](https://jitpack.io/v/virtualcell/vcell-jsbml.svg)](https://jitpack.io/#virtualcell/vcell-jsbml)
 
 ----
 *Authors*: [Andreas Dräger](https://uni-tuebingen.de/en/134053),

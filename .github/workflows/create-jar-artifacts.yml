@@ -60,5 +60,3 @@ jobs:
             core/target/*.jar
             extensions/spatial/target/*.jar
           body: ${{ github.event.inputs.release_description }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

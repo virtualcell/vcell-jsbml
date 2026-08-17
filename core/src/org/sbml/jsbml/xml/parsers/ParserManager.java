@@ -94,10 +94,27 @@ public class ParserManager {
 
   /**
    * Returns the {@link ParserManager}.
-   * 
+   *
+   * <p>Synchronized because the singleton cannot be built twice. {@link #readingParserList} and
+   * {@link #writingParserList} are static {@link ServiceLoader} iterators, and {@link #init()}
+   * consumes them, so a second concurrent call into the constructor shares one partly-consumed
+   * iterator with the first. That surfaces as a {@link NullPointerException} inside
+   * {@code ServiceLoader$LazyClassPathLookupIterator.parse} or a
+   * {@link java.util.NoSuchElementException} out of {@code CompoundEnumeration.nextElement},
+   * thrown from whichever caller happened to be reading SBML at the time.
+   *
+   * <p>The parser maps themselves survive a second construction, because the {@link #parserDefaults}
+   * fallback below re-instantiates by name everything the drained iterator failed to supply -- a
+   * second {@code init()} was measured to produce an identical 12-namespace map. A
+   * {@link ReadingParser} contributed only through {@code META-INF/services} and absent from that
+   * hard-coded list would be lost, but no such parser ships with JSBML.
+   *
+   * <p>Holding the lock across construction also publishes {@link #manager} safely, which a plain
+   * read of the non-volatile field would not.
+   *
    * @return the {@link ParserManager}.
    */
-  public static ParserManager getManager() {
+  public static synchronized ParserManager getManager() {
     if (manager == null) {
       manager = new ParserManager();
     }

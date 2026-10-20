@@ -22,7 +22,8 @@ package org.sbml.jsbml.ext.spatial;
 import java.text.MessageFormat;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.AbstractSBase;
 
 
@@ -40,7 +41,7 @@ public abstract class CoordinateReference extends AbstractSBase {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(CoordinateReference.class);
+  private static final transient Logger logger = LogManager.getLogger(CoordinateReference.class);
   
   /**
    * Generated serial version identifier.

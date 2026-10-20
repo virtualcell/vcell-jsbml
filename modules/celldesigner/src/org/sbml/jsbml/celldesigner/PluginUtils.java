@@ -54,7 +54,8 @@ import jp.sbi.celldesigner.plugin.PluginUnitDefinition;
 import jp.sbi.celldesigner.plugin.util.PluginCompartmentSymbolType;
 import jp.sbi.celldesigner.plugin.util.PluginReactionSymbolType;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.AssignmentRule;
 import org.sbml.jsbml.CVTerm;
 import org.sbml.jsbml.Compartment;
@@ -108,7 +109,7 @@ public class PluginUtils {
   /**
    * A {@link Logger} for this class.
    */
-  private static final Logger logger = Logger.getLogger(PluginUtils.class);
+  private static final Logger logger = LogManager.getLogger(PluginUtils.class);
   /**
    * Localization support.
    */

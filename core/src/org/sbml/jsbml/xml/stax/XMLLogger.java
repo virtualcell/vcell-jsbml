@@ -20,8 +20,9 @@
 package org.sbml.jsbml.xml.stax;
 
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.Priority;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * 
@@ -33,7 +34,7 @@ public class XMLLogger {
   /**
    * logger
    */
-  private static final transient Logger logger = Logger.getLogger(XMLLogger.class);
+  private static final transient Logger logger = LogManager.getLogger(XMLLogger.class);
 
   /**
    * 
@@ -69,11 +70,11 @@ public class XMLLogger {
 
   /**
    * 
-   * @param priority
+   * @param level
    * @param message
    */
-  public void log(Priority priority, String message) {
-    logger.log(priority, message);
+  public void log(Level level, String message) {
+    logger.log(level, message);
   }
 
 }

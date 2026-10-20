@@ -27,7 +27,8 @@ import java.util.Map;
 
 import javax.xml.stream.XMLStreamException;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.AbstractNamedSBase;
 import org.sbml.jsbml.Creator;
 import org.sbml.jsbml.LevelVersionError;
@@ -53,7 +54,7 @@ public class ExternalModelDefinition extends AbstractNamedSBase
    * A {@link Logger} for this class.
    */
   private static final transient Logger logger           =
-    Logger.getLogger(Creator.class);
+    LogManager.getLogger(Creator.class);
   /**
    * Generated serial version identifier.
    */

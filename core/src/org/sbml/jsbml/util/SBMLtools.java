@@ -27,7 +27,8 @@ import java.util.UUID;
 import javax.swing.tree.TreeNode;
 import javax.xml.stream.XMLStreamException;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.Model;
 import org.sbml.jsbml.SBMLDocument;
 import org.sbml.jsbml.SBO;
@@ -45,7 +46,7 @@ public class SBMLtools {
   /**
    * A {@link Logger} for this class.
    */
-  private static final Logger logger = Logger.getLogger(SBMLtools.class);
+  private static final Logger logger = LogManager.getLogger(SBMLtools.class);
 
   /**
    *

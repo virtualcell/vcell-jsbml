@@ -18,7 +18,8 @@ package org.sbml.jsbml.util;
 
 import static java.text.MessageFormat.format;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.Model;
 import org.sbml.jsbml.SBMLDocument;
 import org.sbml.jsbml.SBase;
@@ -35,7 +36,7 @@ public class PackageDisabler {
    * A logger for this class.
    */
   private static final transient Logger logger =
-    Logger.getLogger(PackageDisabler.class);
+    LogManager.getLogger(PackageDisabler.class);
   private final Map<String, String> namespaceMapping;
   private SBMLDocument document;
 

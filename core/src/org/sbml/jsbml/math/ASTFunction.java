@@ -23,7 +23,8 @@ package org.sbml.jsbml.math;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode.Type;
 import org.sbml.jsbml.CallableSBase;
 import org.sbml.jsbml.MathContainer;
@@ -51,7 +52,7 @@ public class ASTFunction extends AbstractASTNode {
   /**
    * A {@link Logger} for this class.
    */
-  private static transient final Logger logger = Logger.getLogger(ASTFunction.class);
+  private static transient final Logger logger = LogManager.getLogger(ASTFunction.class);
 
   /**
    * Child nodes.

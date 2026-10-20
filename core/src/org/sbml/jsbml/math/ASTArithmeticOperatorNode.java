@@ -22,7 +22,8 @@ package org.sbml.jsbml.math;
 
 import java.text.MessageFormat;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode.Type;
 import org.sbml.jsbml.MathContainer;
 import org.sbml.jsbml.SBMLException;
@@ -50,7 +51,7 @@ public class ASTArithmeticOperatorNode extends ASTFunction {
   /**
    * A {@link Logger} for this class.
    */
-  private static final Logger logger = Logger.getLogger(ASTArithmeticOperatorNode.class);
+  private static final Logger logger = LogManager.getLogger(ASTArithmeticOperatorNode.class);
 
   /**
    * Creates a new {@link ASTArithmeticOperatorNode} without a pointer

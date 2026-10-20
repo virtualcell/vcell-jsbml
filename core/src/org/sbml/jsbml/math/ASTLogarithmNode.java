@@ -22,7 +22,8 @@ package org.sbml.jsbml.math;
 
 import java.util.ArrayList;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode.Type;
 import org.sbml.jsbml.SBMLException;
 import org.sbml.jsbml.math.compiler.ASTNode2Compiler;
@@ -48,7 +49,7 @@ public class ASTLogarithmNode extends ASTBinaryFunctionNode {
   /**
    * A {@link Logger} for this class.
    */
-  private static final Logger logger = Logger.getLogger(ASTLogarithmNode.class);
+  private static final Logger logger = LogManager.getLogger(ASTLogarithmNode.class);
 
   /**
    * Creates a new {@link ASTLogarithmNode}.

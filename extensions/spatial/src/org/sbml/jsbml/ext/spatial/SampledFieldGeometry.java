@@ -26,7 +26,8 @@ import java.util.Map;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ListOf;
 import org.sbml.jsbml.PropertyUndefinedError;
 import org.sbml.jsbml.SBMLException;
@@ -44,7 +45,7 @@ public class SampledFieldGeometry extends GeometryDefinition {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(SampledFieldGeometry.class);
+  private static final transient Logger logger = LogManager.getLogger(SampledFieldGeometry.class);
 
   /**
    * Generated serial version identifier.

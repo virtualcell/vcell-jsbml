@@ -22,7 +22,8 @@ package org.sbml.jsbml.xml.libsbml;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.SBMLException;
 import org.sbml.jsbml.SBMLOutputConverter;
 
@@ -35,7 +36,7 @@ public class LibSBMLWriter implements SBMLOutputConverter<org.sbml.libsbml.Model
   /**
    * A {@link Logger} for this class.
    */
-  private static final Logger logger = Logger.getLogger(LibSBMLWriter.class);
+  private static final Logger logger = LogManager.getLogger(LibSBMLWriter.class);
 
   /* (non-Javadoc)
    * @see org.sbml.jsbml.SBMLWriter#getWriteWarnings()

@@ -21,7 +21,8 @@ package org.sbml.jsbml.ext.layout;
 
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.AbstractSBase;
 import org.sbml.jsbml.SBMLException;
 import org.sbml.jsbml.util.TreeNodeChangeEvent;
@@ -113,7 +114,7 @@ public abstract class CurveSegment extends AbstractSBase {
   /**
    * 
    */
-  private static final transient Logger logger = Logger.getLogger(CurveSegment.class);
+  private static final transient Logger logger = LogManager.getLogger(CurveSegment.class);
 
   /**
    * 

@@ -23,7 +23,8 @@ package org.sbml.jsbml.validator.offline.factory;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.validator.SBMLValidator.CHECK_CATEGORY;
 import org.sbml.jsbml.validator.offline.ValidationContext;
 import org.sbml.jsbml.validator.offline.constraints.AbstractConstraintDeclaration;
@@ -52,7 +53,7 @@ public class ConstraintFactory {
   /**
    * Log4j logger
    */
-  protected static final transient Logger logger = Logger.getLogger(ConstraintFactory.class);
+  protected static final transient Logger logger = LogManager.getLogger(ConstraintFactory.class);
 
   /**
    * Shared singleton instance

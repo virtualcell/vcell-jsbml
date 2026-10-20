@@ -24,7 +24,8 @@ import java.text.MessageFormat;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode.Type;
 import org.sbml.jsbml.AbstractTreeNode;
 import org.sbml.jsbml.MathContainer;
@@ -53,7 +54,7 @@ implements ASTNode2 {
   /**
    * A {@link Logger} for this class.
    */
-  private static transient final Logger logger = Logger.getLogger(AbstractASTNode.class);
+  private static transient final Logger logger = LogManager.getLogger(AbstractASTNode.class);
 
   /**
    * The container that holds this {@link AbstractASTNode}.

@@ -24,7 +24,8 @@ import java.util.Map;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.PropertyUndefinedError;
 import org.sbml.jsbml.util.StringTools;
 import org.sbml.jsbml.xml.parsers.AbstractReaderWriter;
@@ -41,7 +42,7 @@ public class CSGObject extends AbstractSpatialNamedSBase {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(CSGObject.class);
+  private static final transient Logger logger = LogManager.getLogger(CSGObject.class);
 
   /**
    * Generated serial version identifier.

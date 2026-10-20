@@ -45,7 +45,8 @@ import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.SBMLError;
 import org.sbml.jsbml.SBMLErrorLog;
 import org.sbml.jsbml.util.Detail;
@@ -88,7 +89,7 @@ class Validator {
   public static InputStream validateSBML(String filename,
     Map<String, String> parameters) throws IOException
   {
-    Logger logger = Logger.getLogger(SBMLValidator.class);
+    Logger logger = LogManager.getLogger(SBMLValidator.class);
 
     if (parameters.get("output") == null) {
       parameters.put("output", "xml");
@@ -447,7 +448,7 @@ public class SBMLValidator {
    */
   public static SBMLErrorLog checkConsistency(String fileName, Map<String, String> parameters)
   {
-    Logger logger = Logger.getLogger(SBMLValidator.class);
+    Logger logger = LogManager.getLogger(SBMLValidator.class);
 
     try {
       Reader result = null;
@@ -504,7 +505,7 @@ public class SBMLValidator {
    */
   public static SBMLErrorLog checkConsistency(String xmlValidationString)
   {
-    Logger logger = Logger.getLogger(SBMLValidator.class);
+    Logger logger = LogManager.getLogger(SBMLValidator.class);
 
     if ((xmlValidationString == null) || (xmlValidationString.trim().length() == 0)) {
       return new SBMLErrorLog();

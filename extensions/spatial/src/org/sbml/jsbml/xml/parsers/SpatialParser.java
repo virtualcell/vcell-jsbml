@@ -24,7 +24,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.mangosdk.spi.ProviderFor;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.Compartment;
@@ -102,7 +103,7 @@ public class SpatialParser extends AbstractReaderWriter implements PackageParser
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(SpatialParser.class);
+  private static final transient Logger logger = LogManager.getLogger(SpatialParser.class);
 
   /**
    * The name space of required elements.

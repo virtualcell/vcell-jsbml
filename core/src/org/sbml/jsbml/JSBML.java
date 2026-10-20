@@ -28,7 +28,8 @@ import java.util.Properties;
 
 import javax.xml.stream.XMLStreamException;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.resources.Resource;
 import org.sbml.jsbml.text.parser.FormulaParser;
 import org.sbml.jsbml.text.parser.FormulaParserLL3;
@@ -291,7 +292,7 @@ public class JSBML {
   @SuppressWarnings("unchecked")
   public static <T> void loadClasses(String path,
     Map<String, Class<? extends T>> whereToPutProperties) {
-    Logger logger = Logger.getLogger(JSBML.class);
+    Logger logger = LogManager.getLogger(JSBML.class);
     Properties p = new Properties();
     try {
       p.loadFromXML(Resource.getInstance().getStreamFromResourceLocation(path));

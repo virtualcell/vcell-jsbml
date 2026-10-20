@@ -23,7 +23,8 @@ import java.text.MessageFormat;
 import java.util.Locale;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.util.StringTools;
 import org.sbml.jsbml.util.TreeNodeChangeEvent;
 import org.sbml.jsbml.xml.parsers.AbstractReaderWriter;
@@ -40,7 +41,7 @@ public class Species extends Symbol implements CompartmentalizedSBase {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(Species.class);
+  private static final transient Logger logger = LogManager.getLogger(Species.class);
 
   /**
    * Generated serial version identifier.

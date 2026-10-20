@@ -26,7 +26,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.AbstractSBase;
 import org.sbml.jsbml.SBMLDocument;
 import org.sbml.jsbml.SBase;
@@ -44,7 +45,7 @@ public class PackageUtil {
   /**
    * Log4j logger
    */
-  private static final transient Logger logger = Logger.getLogger(PackageUtil.class);
+  private static final transient Logger logger = LogManager.getLogger(PackageUtil.class);
 
 
   /**

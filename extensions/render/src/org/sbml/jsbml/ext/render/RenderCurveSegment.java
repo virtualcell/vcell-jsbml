@@ -21,7 +21,8 @@ package org.sbml.jsbml.ext.render;
 
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.AbstractSBase;
 import org.sbml.jsbml.SBMLException;
 import org.sbml.jsbml.util.TreeNodeChangeEvent;
@@ -114,7 +115,7 @@ public abstract class RenderCurveSegment extends AbstractSBase implements Point3
   /**
    * 
    */
-  private static final transient Logger logger = Logger.getLogger(RenderCurveSegment.class);
+  private static final transient Logger logger = LogManager.getLogger(RenderCurveSegment.class);
 
   /**
    * 

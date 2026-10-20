@@ -24,7 +24,8 @@ import java.util.Map;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.AbstractSBase;
 import org.sbml.jsbml.NamedSBase;
 
@@ -42,7 +43,7 @@ public abstract class AbstractSpatialNamedSBase extends AbstractSBase implements
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(AbstractSpatialNamedSBase.class);
+  private static final transient Logger logger = LogManager.getLogger(AbstractSpatialNamedSBase.class);
 
   /**
    * Generated serial version identifier.

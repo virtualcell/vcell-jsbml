@@ -29,7 +29,8 @@ import java.util.TreeMap;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ListOf;
 import org.sbml.jsbml.NamedSBase;
 import org.sbml.jsbml.SBase;
@@ -65,7 +66,7 @@ public class ArraysSBasePlugin extends AbstractSBasePlugin implements IdManager{
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(ArraysSBasePlugin.class);
+  private static final transient Logger logger = LogManager.getLogger(ArraysSBasePlugin.class);
 
   /**
    * Maps between the {@link Dimension} identifiers and themselves.

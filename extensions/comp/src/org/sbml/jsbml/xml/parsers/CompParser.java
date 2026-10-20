@@ -27,7 +27,8 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.mangosdk.spi.ProviderFor;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.AbstractSBase;
@@ -62,7 +63,7 @@ public class CompParser extends AbstractReaderWriter implements PackageParser {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(CompParser.class);
+  private static final transient Logger logger = LogManager.getLogger(CompParser.class);
 
   /* (non-Javadoc)
    * @see org.sbml.jsbml.xml.parsers.AbstractReaderWriter#getNamespaceURI()

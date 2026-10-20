@@ -25,7 +25,8 @@ import java.util.Map;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.AbstractNamedSBase;
 import org.sbml.jsbml.UniqueNamedSBase;
 import org.sbml.jsbml.util.ResourceManager;
@@ -53,7 +54,7 @@ public class BoundingBox extends AbstractNamedSBase implements UniqueNamedSBase 
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(BoundingBox.class);
+  private static final transient Logger logger = LogManager.getLogger(BoundingBox.class);
 
   /**
    * 

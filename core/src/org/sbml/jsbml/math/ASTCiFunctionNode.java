@@ -22,7 +22,8 @@ package org.sbml.jsbml.math;
 
 import java.text.MessageFormat;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode.Type;
 import org.sbml.jsbml.FunctionDefinition;
 import org.sbml.jsbml.Model;
@@ -54,7 +55,7 @@ ASTCSymbolBaseNode {
   /**
    * A {@link Logger} for this class.
    */
-  private static final Logger logger = Logger.getLogger(ASTCiFunctionNode.class);
+  private static final Logger logger = LogManager.getLogger(ASTCiFunctionNode.class);
 
   /**
    * definitionURL attribute for MathML element

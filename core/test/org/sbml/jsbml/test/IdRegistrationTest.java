@@ -23,7 +23,8 @@ package org.sbml.jsbml.test;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 import org.sbml.jsbml.Compartment;
 import org.sbml.jsbml.FunctionDefinition;
@@ -48,7 +49,7 @@ public class IdRegistrationTest {
   /**
    * 
    */
-  private static final transient Logger logger = Logger.getLogger(IdRegistrationTest.class);
+  private static final transient Logger logger = LogManager.getLogger(IdRegistrationTest.class);
 
   /**
    * 

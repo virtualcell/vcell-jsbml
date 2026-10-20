@@ -39,7 +39,8 @@ import java.util.UUID;
 import javax.swing.tree.TreeNode;
 import javax.xml.stream.XMLStreamException;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.util.StringTools;
 import org.sbml.jsbml.util.TreeNodeChangeEvent;
 import org.sbml.jsbml.util.TreeNodeChangeListener;
@@ -131,7 +132,7 @@ public class SBMLDocument extends AbstractSBase {
    * logger used to print messages
    */
   private static final transient Logger logger                     =
-      Logger.getLogger(SBMLDocument.class);
+      LogManager.getLogger(SBMLDocument.class);
 
   /**
    * Stores all the meta identifiers within this {@link SBMLDocument} to avoid

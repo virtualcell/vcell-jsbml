@@ -20,7 +20,8 @@
  */
 package org.sbml.jsbml.math;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode.Type;
 import org.sbml.jsbml.PropertyUndefinedError;
 import org.sbml.jsbml.SBMLException;
@@ -50,7 +51,7 @@ public class ASTCnExponentialNode extends ASTCnNumberNode<ValuePair<Integer,Doub
   /**
    * A {@link Logger} for this class.
    */
-  private static final Logger logger = Logger.getLogger(ASTCnExponentialNode.class);
+  private static final Logger logger = LogManager.getLogger(ASTCnExponentialNode.class);
 
   /**
    * Creates a new {@link ASTCnExponentialNode} that lacks a pointer

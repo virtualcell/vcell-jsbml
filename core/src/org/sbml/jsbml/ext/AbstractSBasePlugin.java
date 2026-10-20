@@ -26,7 +26,8 @@ import java.util.TreeMap;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.AbstractTreeNode;
 import org.sbml.jsbml.SBMLDocument;
 import org.sbml.jsbml.SBase;
@@ -47,7 +48,7 @@ public abstract class AbstractSBasePlugin extends AbstractTreeNode implements SB
   /**
    * 
    */
-  private static final transient Logger logger = Logger.getLogger(AbstractSBasePlugin.class);
+  private static final transient Logger logger = LogManager.getLogger(AbstractSBasePlugin.class);
   
   /**
    * 

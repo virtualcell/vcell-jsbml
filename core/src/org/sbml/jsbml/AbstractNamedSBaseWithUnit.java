@@ -21,7 +21,8 @@ package org.sbml.jsbml;
 
 import java.text.MessageFormat;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.Unit.Kind;
 import org.sbml.jsbml.util.TreeNodeChangeEvent;
 
@@ -48,7 +49,7 @@ implements NamedSBaseWithDerivedUnit, SBaseWithUnit {
   /**
    * Log4j logger
    */
-  private static final transient Logger logger = Logger.getLogger(AbstractNamedSBaseWithUnit.class);
+  private static final transient Logger logger = LogManager.getLogger(AbstractNamedSBaseWithUnit.class);
 
   /**
    * The unit attribute of this variable.

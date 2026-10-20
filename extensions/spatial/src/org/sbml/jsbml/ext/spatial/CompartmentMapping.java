@@ -22,7 +22,8 @@ package org.sbml.jsbml.ext.spatial;
 import java.text.MessageFormat;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.Model;
 import org.sbml.jsbml.PropertyUndefinedError;
 import org.sbml.jsbml.util.StringTools;
@@ -40,7 +41,7 @@ public class CompartmentMapping extends AbstractSpatialNamedSBase {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(CompartmentMapping.class);
+  private static final transient Logger logger = LogManager.getLogger(CompartmentMapping.class);
 
   /**
    * Generated serial version identifier.

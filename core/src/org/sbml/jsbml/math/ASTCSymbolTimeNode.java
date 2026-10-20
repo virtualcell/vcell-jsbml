@@ -20,7 +20,8 @@
  */
 package org.sbml.jsbml.math;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.ASTNode.Type;
 import org.sbml.jsbml.PropertyUndefinedError;
@@ -49,7 +50,7 @@ implements ASTCSymbolNode {
   /**
    * A {@link Logger} for this class.
    */
-  private static final Logger logger = Logger.getLogger(ASTCSymbolTimeNode.class);
+  private static final Logger logger = LogManager.getLogger(ASTCSymbolTimeNode.class);
 
   /**
    * The encoding of this csymbol element

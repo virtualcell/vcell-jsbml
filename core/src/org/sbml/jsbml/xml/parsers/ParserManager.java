@@ -27,7 +27,8 @@ import java.util.Map;
 import java.util.ServiceConfigurationError;
 import java.util.ServiceLoader;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 /**
@@ -74,7 +75,7 @@ public class ParserManager {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(ParserManager.class);
+  private static final transient Logger logger = LogManager.getLogger(ParserManager.class);
 
   private String[] parserDefaults = 
     {"org.sbml.jsbml.xml.parsers.UncertMLXMLNodeReader", "org.sbml.jsbml.xml.parsers.SBMLCoreParser", 

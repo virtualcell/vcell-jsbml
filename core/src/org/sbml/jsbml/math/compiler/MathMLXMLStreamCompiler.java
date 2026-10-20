@@ -30,7 +30,8 @@ import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamWriter;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.codehaus.staxmate.SMOutputFactory;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.ASTNode.Type;
@@ -145,7 +146,7 @@ public class MathMLXMLStreamCompiler {
   /**
    * 
    */
-  private final Logger logger = Logger.getLogger(MathMLXMLStreamCompiler.class);
+  private final Logger logger = LogManager.getLogger(MathMLXMLStreamCompiler.class);
 
   /**
    * 

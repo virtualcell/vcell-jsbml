@@ -25,7 +25,8 @@ import java.util.Properties;
 
 import javax.xml.stream.XMLStreamException;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.JSBML;
 import org.sbml.jsbml.SBase;
 import org.sbml.jsbml.xml.XMLNode;
@@ -40,7 +41,7 @@ import org.sbml.jsbml.xml.XMLNode;
  */
 public class CobraUtil {
   
-  private static final transient Logger logger = Logger.getLogger(CobraUtil.class);
+  private static final transient Logger logger = LogManager.getLogger(CobraUtil.class);
   
   /**
    * Parses the notes of the given {@link SBase} element.

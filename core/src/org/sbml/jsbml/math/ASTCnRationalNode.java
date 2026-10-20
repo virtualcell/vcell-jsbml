@@ -20,7 +20,8 @@
  */
 package org.sbml.jsbml.math;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode.Type;
 import org.sbml.jsbml.PropertyUndefinedError;
 import org.sbml.jsbml.SBMLException;
@@ -50,7 +51,7 @@ public class ASTCnRationalNode extends ASTCnNumberNode<ValuePair<Integer,Integer
   /**
    * A {@link Logger} for this class.
    */
-  private static final Logger logger = Logger.getLogger(ASTCnRationalNode.class);
+  private static final Logger logger = LogManager.getLogger(ASTCnRationalNode.class);
 
   /**
    * Creates a new {@link ASTCnRationalNode} that lacks a pointer

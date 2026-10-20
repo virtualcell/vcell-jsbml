@@ -22,7 +22,8 @@ package org.sbml.jsbml;
 
 import java.text.MessageFormat;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * This exception is thrown when trying to set or add an identifier to an
@@ -41,7 +42,7 @@ public class IdentifierException extends SBMLException {
   /**
    * 
    */
-  private static transient final Logger logger = Logger.getLogger(IdentifierException.class);
+  private static transient final Logger logger = LogManager.getLogger(IdentifierException.class);
   /**
    * 
    */

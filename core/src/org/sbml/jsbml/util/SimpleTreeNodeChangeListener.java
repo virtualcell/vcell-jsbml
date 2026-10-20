@@ -25,7 +25,8 @@ import java.text.MessageFormat;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode;
 
 /**
@@ -40,7 +41,7 @@ public class SimpleTreeNodeChangeListener implements TreeNodeChangeListener, Ser
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(SimpleTreeNodeChangeListener.class);
+  private static final transient Logger logger = LogManager.getLogger(SimpleTreeNodeChangeListener.class);
   private static final transient boolean isDebugEnabled = logger.isDebugEnabled();
 
   /**

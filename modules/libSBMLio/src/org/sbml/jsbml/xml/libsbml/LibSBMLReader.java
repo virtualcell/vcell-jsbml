@@ -32,7 +32,8 @@ import java.util.Set;
 
 import javax.xml.stream.XMLStreamException;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.AlgebraicRule;
 import org.sbml.jsbml.AssignmentRule;
 import org.sbml.jsbml.Compartment;
@@ -90,7 +91,7 @@ public class LibSBMLReader implements SBMLInputConverter<org.sbml.libsbml.Model>
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(LibSBMLReader.class);
+  private static final transient Logger logger = LogManager.getLogger(LibSBMLReader.class);
 
   /**
    * Localization support.

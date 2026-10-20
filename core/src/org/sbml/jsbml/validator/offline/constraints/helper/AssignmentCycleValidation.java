@@ -25,7 +25,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Set;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.ASTNode.Type;
 import org.sbml.jsbml.Assignment;
@@ -72,7 +73,7 @@ public class AssignmentCycleValidation
   /**
    * A {@link Logger} for this class.
    */
-  private static transient final Logger logger = Logger.getLogger(AssignmentCycleValidation.class);
+  private static transient final Logger logger = LogManager.getLogger(AssignmentCycleValidation.class);
   /**
    * A static boolean to avoid many unnecessary calls to {@link Logger#isDebugEnabled()}.
    */

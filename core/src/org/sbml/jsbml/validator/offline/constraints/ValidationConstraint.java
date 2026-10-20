@@ -23,7 +23,8 @@ package org.sbml.jsbml.validator.offline.constraints;
 import java.text.MessageFormat;
 import java.util.ResourceBundle;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.SBMLError;
 import org.sbml.jsbml.SBase;
 import org.sbml.jsbml.validator.offline.LoggingValidationContext;
@@ -45,7 +46,7 @@ public class ValidationConstraint<T> extends AbstractConstraint<T> {
   /**
    * the logger
    */
-  protected static transient Logger logger = Logger.getLogger(ValidationConstraint.class);
+  protected static transient Logger logger = LogManager.getLogger(ValidationConstraint.class);
   /**
    *  the {@link ValidationFunction} that will perform the validation
    */

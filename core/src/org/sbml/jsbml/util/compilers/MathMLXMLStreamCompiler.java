@@ -30,7 +30,8 @@ import java.util.Map;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamWriter;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.codehaus.staxmate.SMOutputFactory;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.ASTNode.Type;
@@ -65,7 +66,7 @@ public class MathMLXMLStreamCompiler {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(MathMLXMLStreamCompiler.class);
+  private static final transient Logger logger = LogManager.getLogger(MathMLXMLStreamCompiler.class);
 
   /**
    * 

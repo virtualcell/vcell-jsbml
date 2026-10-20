@@ -23,7 +23,8 @@ package org.sbml.jsbml.ext.arrays.validator.constraints;
 import java.text.MessageFormat;
 import java.util.ResourceBundle;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.Model;
 import org.sbml.jsbml.SBase;
 import org.sbml.jsbml.ext.arrays.ArraysConstants;
@@ -58,7 +59,7 @@ public class IndexAttributesCheck extends ArraysConstraint {
   /**
    * 
    */
-  private static final Logger logger = Logger.getLogger(IndexAttributesCheck.class);
+  private static final Logger logger = LogManager.getLogger(IndexAttributesCheck.class);
 
   /**
    * @param model

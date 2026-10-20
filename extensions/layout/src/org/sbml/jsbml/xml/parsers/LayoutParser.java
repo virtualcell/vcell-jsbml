@@ -29,7 +29,8 @@ import java.util.List;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.mangosdk.spi.ProviderFor;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.AbstractSBase;
@@ -78,7 +79,7 @@ public class LayoutParser implements ReadingParser, WritingParser, PackageParser
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(LayoutParser.class);
+  private static final transient Logger logger = LogManager.getLogger(LayoutParser.class);
 
   /**
    * 
@@ -141,7 +142,7 @@ public class LayoutParser implements ReadingParser, WritingParser, PackageParser
   /**
    * Log4j logger
    */
-  private Logger log4jLogger = Logger.getLogger(LayoutParser.class);
+  private Logger log4jLogger = LogManager.getLogger(LayoutParser.class);
 
   /**
    * This map contains all the relationships XML element name <=> matching

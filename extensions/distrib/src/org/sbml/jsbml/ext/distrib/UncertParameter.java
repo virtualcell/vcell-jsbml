@@ -23,7 +23,8 @@ import java.util.Map;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.AbstractMathContainer;
 import org.sbml.jsbml.ListOf;
@@ -196,7 +197,7 @@ public class UncertParameter extends AbstractDistribSBase implements MathContain
   /**
    * A logger for user-messages.
    */
-  private static final transient Logger logger = Logger.getLogger(AbstractMathContainer.class);
+  private static final transient Logger logger = LogManager.getLogger(AbstractMathContainer.class);
 
   /**
    *

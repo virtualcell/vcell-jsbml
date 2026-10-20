@@ -26,7 +26,8 @@ import java.util.List;
 import javax.swing.tree.TreeNode;
 import javax.xml.stream.XMLStreamException;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.CVTerm.Qualifier;
 import org.sbml.jsbml.util.StringTools;
 import org.sbml.jsbml.util.TreeNodeAdapter;
@@ -542,7 +543,7 @@ public class Annotation extends AnnotationElement {
       try {
         return fullAnnotation.toXMLString();
       } catch (XMLStreamException e) {
-        Logger logger = Logger.getLogger(Annotation.class);
+        Logger logger = LogManager.getLogger(Annotation.class);
         if (logger.isDebugEnabled()) {
           e.printStackTrace();
         }

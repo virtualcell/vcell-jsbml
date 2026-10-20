@@ -29,7 +29,8 @@ import java.util.TimeZone;
 
 import javax.xml.stream.XMLStreamException;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.ASTNode.Type;
 import org.sbml.jsbml.Annotation;
@@ -87,7 +88,7 @@ public class LibSBMLUtils {
   /**
    * A {@link Logger} for this class.
    */
-  private static final Logger logger = Logger.getLogger(LibSBMLUtils.class);
+  private static final Logger logger = LogManager.getLogger(LibSBMLUtils.class);
 
   /**
    * 

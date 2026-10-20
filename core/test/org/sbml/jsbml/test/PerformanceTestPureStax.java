@@ -38,7 +38,8 @@ import javax.xml.stream.events.StartDocument;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.SBMLException;
 import org.sbml.jsbml.util.TreeNodeChangeListener;
 
@@ -52,7 +53,7 @@ public class PerformanceTestPureStax {
   /**
    * A {@link Logger} for this class.
    */
-  private static Logger logger = Logger.getLogger(PerformanceTestPureStax.class);
+  private static Logger logger = LogManager.getLogger(PerformanceTestPureStax.class);
 
   /**
    * @param xmlEventReader

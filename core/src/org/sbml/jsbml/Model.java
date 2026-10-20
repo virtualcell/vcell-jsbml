@@ -32,7 +32,8 @@ import java.util.TreeSet;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ext.SBasePlugin;
 import org.sbml.jsbml.util.IdManager;
 import org.sbml.jsbml.util.TreeNodeChangeEvent;
@@ -69,7 +70,7 @@ implements UniqueNamedSBase, IdManager {
    * A {@link Logger} for this class.
    */
   private static final transient Logger logger                       =
-      Logger.getLogger(Model.class);
+      LogManager.getLogger(Model.class);
   /**
    * Generated serial version identifier.
    */

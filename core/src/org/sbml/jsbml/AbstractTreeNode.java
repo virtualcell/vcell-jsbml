@@ -39,7 +39,8 @@ import java.util.TreeMap;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.util.*;
 import org.sbml.jsbml.util.filters.Filter;
 
@@ -64,7 +65,7 @@ public abstract class AbstractTreeNode implements TreeNodeWithChangeSupport {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(AbstractTreeNode.class);
+  private static final transient Logger logger = LogManager.getLogger(AbstractTreeNode.class);
 
 
   /**

@@ -25,7 +25,8 @@ import java.util.List;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.mangosdk.spi.ProviderFor;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.ASTNode.Type;
@@ -81,7 +82,7 @@ public class MathMLStaxParser implements ReadingParser {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(MathMLStaxParser.class);
+  private static final transient Logger logger = LogManager.getLogger(MathMLStaxParser.class);
 
   /**
    * 

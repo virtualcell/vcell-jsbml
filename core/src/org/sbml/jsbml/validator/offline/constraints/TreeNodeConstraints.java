@@ -25,7 +25,8 @@ import java.util.Set;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.SBase;
 import org.sbml.jsbml.ext.ASTNodePlugin;
@@ -45,7 +46,7 @@ implements CoreSpecialErrorCodes {
   /**
    * Log4j logger
    */
-  protected static final transient Logger logger = Logger.getLogger(TreeNodeConstraints.class);
+  protected static final transient Logger logger = LogManager.getLogger(TreeNodeConstraints.class);
   /**
    * 
    */

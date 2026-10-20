@@ -24,7 +24,8 @@ import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.mangosdk.spi.ProviderFor;
 import org.sbml.jsbml.Annotation;
 import org.sbml.jsbml.Constraint;
@@ -57,7 +58,7 @@ public class XMLNodeReader implements ReadingParser {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(XMLNodeReader.class);
+  private static final transient Logger logger = LogManager.getLogger(XMLNodeReader.class);
 
   /**
    * 

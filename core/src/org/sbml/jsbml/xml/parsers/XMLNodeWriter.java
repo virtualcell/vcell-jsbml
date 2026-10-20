@@ -24,7 +24,8 @@ import java.io.StringWriter;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamWriter;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.codehaus.stax2.XMLStreamWriter2;
 import org.codehaus.staxmate.SMOutputFactory;
 import org.sbml.jsbml.util.StringTools;
@@ -59,7 +60,7 @@ public class XMLNodeWriter {
   /**
    * 
    */
-  private static transient final Logger logger = Logger.getLogger(XMLNodeWriter.class);
+  private static transient final Logger logger = LogManager.getLogger(XMLNodeWriter.class);
 
   /**
    * 

@@ -30,7 +30,8 @@ import java.util.ResourceBundle;
 
 import javax.xml.stream.XMLStreamException;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.mangosdk.spi.ProviderFor;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.ListOf;
@@ -107,7 +108,7 @@ public class FBCParser extends AbstractReaderWriter implements PackageParser {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(FBCParser.class);
+  private static final transient Logger logger = LogManager.getLogger(FBCParser.class);
 
   /* (non-Javadoc)
    * @see org.sbml.jsbml.xml.WritingParser#getListOfSBMLElementsToWrite(Object sbase)

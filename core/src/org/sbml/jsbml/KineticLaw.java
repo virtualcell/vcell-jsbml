@@ -25,7 +25,8 @@ import java.util.Map;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.Unit.Kind;
 import org.sbml.jsbml.util.IdManager;
 import org.sbml.jsbml.util.TreeNodeChangeEvent;
@@ -48,7 +49,7 @@ public class KineticLaw extends AbstractMathContainer implements SBaseWithUnit, 
   /**
    * A logger for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(KineticLaw.class);
+  private static final transient Logger logger = LogManager.getLogger(KineticLaw.class);
   /**
    * Generated serial version identifier.
    */

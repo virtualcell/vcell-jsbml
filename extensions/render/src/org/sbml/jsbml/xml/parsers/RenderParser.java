@@ -24,7 +24,8 @@ import java.util.List;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.mangosdk.spi.ProviderFor;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.ListOf;
@@ -76,7 +77,7 @@ public class RenderParser extends AbstractReaderWriter  implements PackageParser
   /**
    * The logger for this RenderParser
    */
-  private static final transient Logger logger = Logger.getLogger(RenderParser.class);
+  private static final transient Logger logger = LogManager.getLogger(RenderParser.class);
 
   /* (non-Javadoc)
    * @see org.sbml.jsbml.xml.parsers.AbstractReaderWriter#getShortLabel()

@@ -23,7 +23,8 @@ import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ListOf;
 import org.sbml.jsbml.Model;
 import org.sbml.jsbml.PropertyUndefinedError;
@@ -54,7 +55,7 @@ public class SpatialModelPlugin extends AbstractSpatialSBasePlugin implements Id
   /**
    * A logger for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(SpatialModelPlugin.class);
+  private static final transient Logger logger = LogManager.getLogger(SpatialModelPlugin.class);
 
   /**
    * Returns the value of geometry

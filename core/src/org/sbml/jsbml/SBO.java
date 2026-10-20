@@ -27,7 +27,8 @@ import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.Set;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.biojava.nbio.ontology.Ontology;
 import org.biojava.nbio.ontology.io.OboParser;
 import org.sbml.jsbml.ontology.Term;
@@ -278,7 +279,7 @@ public class SBO {
     }
 
     if (!correct && (sboTerm != null)) {
-      Logger logger = Logger.getLogger(SBO.class);
+      Logger logger = LogManager.getLogger(SBO.class);
       logger.warn("The SBO term '" + sboTerm + "' does not seem to be valid.");
     }
 

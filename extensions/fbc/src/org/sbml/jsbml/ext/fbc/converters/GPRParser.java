@@ -23,7 +23,8 @@ import static org.sbml.jsbml.util.StringTools.getMessage;
 
 import java.io.StringReader;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.Model;
 import org.sbml.jsbml.Reaction;
@@ -54,7 +55,7 @@ public class GPRParser {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(GPRParser.class);
+  private static final transient Logger logger = LogManager.getLogger(GPRParser.class);
 
 
   /**

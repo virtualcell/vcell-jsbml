@@ -55,8 +55,9 @@ import jp.sbi.celldesigner.plugin.PluginSpeciesType;
 import jp.sbi.celldesigner.plugin.PluginUnit;
 import jp.sbi.celldesigner.plugin.PluginUnitDefinition;
 
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.AbstractNamedSBaseWithUnit;
 import org.sbml.jsbml.Annotation;
@@ -121,7 +122,7 @@ public class PluginChangeListener implements TreeNodeChangeListener {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(PluginChangeListener.class);
+  private static final transient Logger logger = LogManager.getLogger(PluginChangeListener.class);
   /**
    * Localization support.
    */

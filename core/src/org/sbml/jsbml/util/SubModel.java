@@ -28,7 +28,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.Compartment;
 import org.sbml.jsbml.CompartmentType;
@@ -379,7 +380,7 @@ public class SubModel {
    */
   private static void processUnitsMap(Map<String, UnitDefinition> unitsMap, Model model, String elementUnits) {
 
-    Logger debugLogger = Logger.getLogger(SubModel.class);
+    Logger debugLogger = LogManager.getLogger(SubModel.class);
     debugLogger.debug("processUnitsMap called with " + elementUnits);
 
     UnitDefinition unit = model.getUnitDefinition(elementUnits);
@@ -435,7 +436,7 @@ public class SubModel {
     String[] compartmentsIds,
     String[] speciesIds) {
 
-    Logger debugLogger = Logger.getLogger(SubModel.class);
+    Logger debugLogger = LogManager.getLogger(SubModel.class);
     debugLogger.debug("getRelatedCompartments");
 
     // get all related compartments
@@ -506,7 +507,7 @@ public class SubModel {
     String[] speciesIds)
   {
 
-    Logger debugLogger = Logger.getLogger(SubModel.class);
+    Logger debugLogger = LogManager.getLogger(SubModel.class);
     debugLogger.debug("getRelatedSpecies ");
     debugLogger.debug("getRelatedSpecies: reactsIds: " + Arrays.toString(reactsIds));
     debugLogger.debug("getRelatedSpecies: compartmentsIds: " + Arrays.toString(compartmentsIds));
@@ -594,7 +595,7 @@ public class SubModel {
     String[] compartmentsIds,
     String[] speciesIds)
   {
-    Logger debugLogger = Logger.getLogger(SubModel.class);
+    Logger debugLogger = LogManager.getLogger(SubModel.class);
     debugLogger.debug("getRelatedRules ");
     debugLogger.debug("getRelatedRules: rulesIds: " + Arrays.toString(rulesIds));
     debugLogger.debug("getRelatedRules: compartmentsIds: " + Arrays.toString(compartmentsIds));
@@ -675,7 +676,7 @@ public class SubModel {
     String[] compartmentsIds,
     String[] speciesIds)
   {
-    Logger debugLogger = Logger.getLogger(SubModel.class);
+    Logger debugLogger = LogManager.getLogger(SubModel.class);
     debugLogger.debug("getRelatedEvents ");
     debugLogger.debug("getRelatedEvents: eventsIds: " + Arrays.toString(eventsIds));
     debugLogger.debug("getRelatedEvents: compartmentsIds: " + Arrays.toString(compartmentsIds));
@@ -759,7 +760,7 @@ public class SubModel {
     String[] reactsIds,
     String[] speciesIds) {
 
-    Logger debugLogger = Logger.getLogger(SubModel.class);
+    Logger debugLogger = LogManager.getLogger(SubModel.class);
 
     debugLogger.debug("getRelatedReactions ");
     debugLogger.debug("getRelatedReactions: selected reactsIds: " + Arrays.toString(reactsIds));
@@ -858,7 +859,7 @@ public class SubModel {
    */
   private static void getRelatedFunctions(Set<String> relatedFunctionsSet, Set<String> allFunctionsIdSet, ASTNode mathNode) {
 
-    Logger debugLogger = Logger.getLogger(SubModel.class);
+    Logger debugLogger = LogManager.getLogger(SubModel.class);
 
     debugLogger.debug("getRelatedFunctions ");
     debugLogger.debug("getRelatedFunctions: math = " + mathNode);

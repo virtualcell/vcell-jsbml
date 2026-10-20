@@ -46,7 +46,8 @@ import javax.xml.stream.events.StartDocument;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.ASTNode.Type;
 import org.sbml.jsbml.AbstractTreeNode;
@@ -138,7 +139,7 @@ public class SBMLReader {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(SBMLReader.class);
+  private static final transient Logger logger = LogManager.getLogger(SBMLReader.class);
 
   /**
    * Creates the ReadingParser instances and stores them in a
@@ -147,7 +148,7 @@ public class SBMLReader {
    * @return the map containing the ReadingParser instances.
    */
   private  Map<String, ReadingParser> initializePackageParsers() {
-    Logger logger = Logger.getLogger(SBMLReader.class);
+    Logger logger = LogManager.getLogger(SBMLReader.class);
 
     if (logger.isDebugEnabled()) {
       logger.debug("initializePackageParsers called.");

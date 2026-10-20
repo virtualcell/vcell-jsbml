@@ -20,7 +20,8 @@
  */
 package org.sbml.jsbml.math;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode.Type;
 import org.sbml.jsbml.MathContainer;
 import org.sbml.jsbml.Model;
@@ -51,7 +52,7 @@ public class ASTCnNumberNode<T> extends ASTNumber {
   /**
    * A {@link Logger} for this class.
    */
-  private static final Logger logger = Logger.getLogger(ASTCnNumberNode.class);
+  private static final Logger logger = LogManager.getLogger(ASTCnNumberNode.class);
 
   /**
    * Numerical base for MathML element

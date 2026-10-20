@@ -27,7 +27,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.SBMLDocument;
 import org.sbml.jsbml.SBMLError;
 import org.sbml.jsbml.SBMLErrorLog;
@@ -73,7 +74,7 @@ public class OfflineValidatorTests {
   private static Map<String, LoggingValidationContext> contextCache     =
       new HashMap<String, LoggingValidationContext>();
 
-  private static Logger logger = Logger.getLogger(OfflineValidatorTests.class);
+  private static Logger logger = LogManager.getLogger(OfflineValidatorTests.class);
 
   private static int nbNullSource = 0;
 

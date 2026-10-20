@@ -28,7 +28,8 @@ import java.util.ListIterator;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.util.StringTools;
 import org.sbml.jsbml.util.TreeNodeChangeEvent;
 import org.sbml.jsbml.util.TreeNodeWithChangeSupport;
@@ -259,7 +260,7 @@ public class ListOf<T extends SBase> extends AbstractSBase implements List<T>, U
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(ListOf.class);
+  private static final transient Logger logger = LogManager.getLogger(ListOf.class);
 
   /**
    * Initializes newly created lists.

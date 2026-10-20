@@ -66,8 +66,9 @@ import jp.sbi.celldesigner.plugin.PluginUnit;
 import jp.sbi.celldesigner.plugin.PluginUnitDefinition;
 import jp.sbi.celldesigner.plugin.util.PluginSpeciesSymbolType;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.Priority;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.AlgebraicRule;
 import org.sbml.jsbml.AssignmentRule;
 import org.sbml.jsbml.Compartment;
@@ -136,7 +137,7 @@ public class PluginSBMLReader implements SBMLInputConverter<PluginModel> {
   /**
    * A {@link Logger} for this class.
    */
-  private static final Logger logger = Logger.getLogger(PluginSBMLReader.class);
+  private static final Logger logger = LogManager.getLogger(PluginSBMLReader.class);
 
   /**
    *
@@ -177,7 +178,7 @@ public class PluginSBMLReader implements SBMLInputConverter<PluginModel> {
     try {
       this.model = convertModel(model);
     } catch (RuntimeException exc) {
-      logger.log(Priority.ERROR, exc.getLocalizedMessage() != null ? exc.getLocalizedMessage() : exc.getMessage(), exc);
+      logger.log(Level.ERROR, exc.getLocalizedMessage() != null ? exc.getLocalizedMessage() : exc.getMessage(), exc);
       throw exc;
     }
   }

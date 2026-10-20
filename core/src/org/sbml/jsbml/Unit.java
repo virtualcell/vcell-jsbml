@@ -25,7 +25,8 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.Unit.Kind;
 import org.sbml.jsbml.util.*;
 import org.sbml.jsbml.util.compilers.FormulaCompiler;
@@ -592,7 +593,7 @@ public class Unit extends AbstractSBase implements UniqueSId {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(Unit.class);
+  private static final transient Logger logger = LogManager.getLogger(Unit.class);
 
   /**
    * Generated serial version identifier.

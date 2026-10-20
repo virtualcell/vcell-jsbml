@@ -28,7 +28,8 @@ import java.util.Set;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.ASTNode.Type;
 import org.sbml.jsbml.AbstractTreeNode;
@@ -65,7 +66,7 @@ public class ASTNodeConstraints extends AbstractConstraintDeclaration {
   /**
    * 
    */
-  private static transient Logger logger = Logger.getLogger(ASTNodeConstraints.class);
+  private static transient Logger logger = LogManager.getLogger(ASTNodeConstraints.class);
   
 
   /**

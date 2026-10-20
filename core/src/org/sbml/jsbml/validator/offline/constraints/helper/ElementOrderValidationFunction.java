@@ -21,7 +21,8 @@ package org.sbml.jsbml.validator.offline.constraints.helper;
 
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.JSBML;
 import org.sbml.jsbml.SBase;
 import org.sbml.jsbml.validator.offline.ValidationContext;
@@ -39,7 +40,7 @@ public class ElementOrderValidationFunction<T extends SBase> implements Validati
   /**
    * Log4j logger
    */
-  private static final transient Logger logger = Logger.getLogger(SBMLCoreParser.class);
+  private static final transient Logger logger = LogManager.getLogger(SBMLCoreParser.class);
 
   /**
    * an arrays holding the expected order of the (XML) elements

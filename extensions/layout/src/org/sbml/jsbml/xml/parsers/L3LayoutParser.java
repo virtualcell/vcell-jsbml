@@ -54,7 +54,8 @@ import java.util.ResourceBundle;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.mangosdk.spi.ProviderFor;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.ListOf;
@@ -125,7 +126,7 @@ public class L3LayoutParser extends AbstractReaderWriter implements PackageParse
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(L3LayoutParser.class);
+  private static final transient Logger logger = LogManager.getLogger(L3LayoutParser.class);
 
   /* (non-Javadoc)
    * @see org.sbml.jsbml.xml.WritingParser#getListOfSBMLElementsToWrite(Object sbase)

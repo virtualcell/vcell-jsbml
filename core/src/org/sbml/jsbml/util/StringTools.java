@@ -28,7 +28,8 @@ import java.util.Locale;
 import java.util.Properties;
 import java.util.StringTokenizer;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.JSBML;
 import org.sbml.jsbml.resources.Resource;
 
@@ -368,7 +369,7 @@ public class StringTools {
     } else if (toTest.equals("1")) {
       value = true;
     } else if (!(toTest.equalsIgnoreCase("true") || toTest.equalsIgnoreCase("false"))) {
-      Logger logger = Logger.getLogger(StringTools.class);
+      Logger logger = LogManager.getLogger(StringTools.class);
       logger.warn("Could not create a boolean from the string " + valueAsStr);
     }
 
@@ -427,7 +428,7 @@ public class StringTools {
       } else if (toTest.equalsIgnoreCase("-INF")) {
         value = Double.NEGATIVE_INFINITY;
       } else {
-        Logger logger = Logger.getLogger(StringTools.class);
+        Logger logger = LogManager.getLogger(StringTools.class);
         logger.warn("Could not create a double from the string '" + valueAsStr + "'");
       }
     }
@@ -458,7 +459,7 @@ public class StringTools {
       } else if (toTest.equalsIgnoreCase("-INF")) {
         value = Double.NEGATIVE_INFINITY;
       } else {
-        Logger logger = Logger.getLogger(StringTools.class);
+        Logger logger = LogManager.getLogger(StringTools.class);
         logger.warn("Could not create a double from the string '" + valueAsStr + "'");
         throw new IllegalArgumentException("Could not create a double from the string " + valueAsStr);
       }
@@ -482,7 +483,7 @@ public class StringTools {
     try {
       value = Integer.parseInt(valueAsStr.trim());
     } catch (NumberFormatException e) {
-      Logger logger = Logger.getLogger(StringTools.class);
+      Logger logger = LogManager.getLogger(StringTools.class);
       logger.warn("Could not create an integer from the string " + valueAsStr);
       throw new IllegalArgumentException("Must be of type int!", e);
     }
@@ -503,7 +504,7 @@ public class StringTools {
     try {
       v = Short.parseShort(value.trim());
     } catch (NumberFormatException e) {
-      Logger logger = Logger.getLogger(StringTools.class);
+      Logger logger = LogManager.getLogger(StringTools.class);
       logger.warn("Could not create a short from the string " + value);
     }
     return v;
@@ -524,7 +525,7 @@ public class StringTools {
     try {
       v = Short.parseShort(value.trim());
     } catch (NumberFormatException e) {
-      Logger logger = Logger.getLogger(StringTools.class);
+      Logger logger = LogManager.getLogger(StringTools.class);
       logger.warn("Could not create a short from the string " + value);
       throw new IllegalArgumentException("Must be of type short!", e);
     }

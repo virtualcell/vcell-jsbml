@@ -26,7 +26,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.validator.SBMLValidator.CHECK_CATEGORY;
 import org.sbml.jsbml.validator.offline.ValidationContext;
 import org.sbml.jsbml.validator.offline.factory.SBMLErrorCodes;
@@ -66,7 +67,7 @@ implements ConstraintDeclaration, SBMLErrorCodes {
   /**
    * Log4j logger
    */
-  protected static final transient Logger logger = Logger.getLogger(AbstractConstraintDeclaration.class);
+  protected static final transient Logger logger = LogManager.getLogger(AbstractConstraintDeclaration.class);
 
 
   /**

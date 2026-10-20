@@ -25,7 +25,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.Annotation;
 import org.sbml.jsbml.CVTerm;
 import org.sbml.jsbml.CVTerm.Qualifier;
@@ -88,7 +89,7 @@ public class SBMLRDFAnnotationParser implements AnnotationReader, AnnotationWrit
      * Logger to be able to send informative, debug, warning or error messages.
      * 
      */
-    private static final transient Logger logger = Logger.getLogger(SBMLRDFAnnotationParser.class);
+    private static final transient Logger logger = LogManager.getLogger(SBMLRDFAnnotationParser.class);
 
     @Override
     public XMLNode writeAnnotation(SBase contextObject, XMLNode xmlNode)

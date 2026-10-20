@@ -24,7 +24,8 @@ import java.util.Map;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.Model;
 import org.sbml.jsbml.PropertyUndefinedError;
 import org.sbml.jsbml.SBaseWithUnit;
@@ -46,7 +47,7 @@ SBaseWithUnit {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(CoordinateComponent.class);
+  private static final transient Logger logger = LogManager.getLogger(CoordinateComponent.class);
 
   /**
    * Generated serial version identifier.

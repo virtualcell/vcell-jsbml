@@ -24,7 +24,8 @@ import java.util.*;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.CVTerm.Qualifier;
 import org.sbml.jsbml.ListOf.Type;
 import org.sbml.jsbml.Unit.Kind;
@@ -62,7 +63,7 @@ public class UnitDefinition extends AbstractNamedSBase {
    * The logger for this class.
    */
   private static final transient Logger logger           =
-      Logger.getLogger(UnitDefinition.class);
+      LogManager.getLogger(UnitDefinition.class);
   /**
    * Generated serial version identifier.
    */

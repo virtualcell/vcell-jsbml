@@ -23,7 +23,8 @@ package org.sbml.jsbml.math;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * An Abstract Syntax Tree (AST) node representing a function with two
@@ -42,7 +43,7 @@ public class ASTBinaryFunctionNode extends ASTFunction {
   /**
    * A {@link Logger} for this class.
    */
-  private static final Logger logger = Logger.getLogger(ASTBinaryFunctionNode.class);
+  private static final Logger logger = LogManager.getLogger(ASTBinaryFunctionNode.class);
 
   /**
    * Creates a new {@link ASTBinaryFunctionNode}.

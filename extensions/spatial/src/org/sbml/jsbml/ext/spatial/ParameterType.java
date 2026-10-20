@@ -24,7 +24,8 @@ import java.util.Map;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.AbstractSBase;
 import org.sbml.jsbml.Model;
 import org.sbml.jsbml.Parameter;
@@ -44,7 +45,7 @@ public class ParameterType extends AbstractSBase {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(ParameterType.class);
+  private static final transient Logger logger = LogManager.getLogger(ParameterType.class);
 
   /**
    * Generated serial version identifier.

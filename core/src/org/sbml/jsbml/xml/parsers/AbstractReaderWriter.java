@@ -28,7 +28,8 @@ import java.util.List;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.AbstractTreeNode;
 import org.sbml.jsbml.Annotation;
 import org.sbml.jsbml.JSBML;
@@ -54,7 +55,7 @@ public abstract class AbstractReaderWriter implements ReadingParser, WritingPars
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(AbstractReaderWriter.class);
+  private static final transient Logger logger = LogManager.getLogger(AbstractReaderWriter.class);
 
   /* (non-Javadoc)
    * @see org.sbml.jsbml.xml.parsers.ReadingParser#processAttribute(String

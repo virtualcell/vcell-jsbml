@@ -22,7 +22,8 @@ package org.sbml.jsbml.ext.spatial;
 import java.text.MessageFormat;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.AbstractMathContainer;
 import org.sbml.jsbml.NamedSBase;
 import org.sbml.jsbml.PropertyUndefinedError;
@@ -42,7 +43,7 @@ public class AnalyticVolume extends AbstractMathContainer implements NamedSBase,
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(AnalyticVolume.class);
+  private static final transient Logger logger = LogManager.getLogger(AnalyticVolume.class);
 
   /**
    * 

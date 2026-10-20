@@ -27,7 +27,8 @@ import java.util.Set;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.util.ValuePair;
 import org.sbml.jsbml.validator.SBMLValidator.CHECK_CATEGORY;
 import org.sbml.jsbml.validator.offline.constraints.AnyConstraint;
@@ -67,7 +68,7 @@ public class ValidationContext {
   /**
    * Log4j logger
    */
-  protected static final transient Logger logger = Logger.getLogger(ValidationContext.class);
+  protected static final transient Logger logger = LogManager.getLogger(ValidationContext.class);
 
   /**
    * The root constraint, which could contains more constraints (will be in general a {@link ConstraintGroup})

@@ -20,7 +20,8 @@
  */
 package org.sbml.jsbml.math;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ASTNode;
 import org.sbml.jsbml.ASTNode.Type;
 import org.sbml.jsbml.PropertyUndefinedError;
@@ -46,7 +47,7 @@ ASTCSymbolNode {
   /**
    * A {@link Logger} for this class.
    */
-  private static final Logger logger = Logger.getLogger(ASTCSymbolAvogadroNode.class);
+  private static final Logger logger = LogManager.getLogger(ASTCSymbolAvogadroNode.class);
 
   /**
    * definitionURL attribute for MathML element

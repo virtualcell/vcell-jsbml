@@ -27,7 +27,8 @@ import java.util.Map;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.ListOf;
 import org.sbml.jsbml.Model;
 import org.sbml.jsbml.SBase;
@@ -50,7 +51,7 @@ public class CompModelPlugin extends CompSBasePlugin implements IdManager {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(CompModelPlugin.class);
+  private static final transient Logger logger = LogManager.getLogger(CompModelPlugin.class);
 
   /**
    * 

@@ -22,7 +22,8 @@ package org.sbml.jsbml.ext.spatial;
 import java.text.MessageFormat;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sbml.jsbml.PropertyUndefinedError;
 import org.sbml.jsbml.xml.parsers.AbstractReaderWriter;
 
@@ -38,7 +39,7 @@ public class AdvectionCoefficient extends ParameterType {
   /**
    * A {@link Logger} for this class.
    */
-  private static final transient Logger logger = Logger.getLogger(AdvectionCoefficient.class);
+  private static final transient Logger logger = LogManager.getLogger(AdvectionCoefficient.class);
   
   /**
    * Generated serial version identifier.
